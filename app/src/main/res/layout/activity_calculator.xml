@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calculator">
+
+
+    <EditText
+        android:id="@+id/ETnumber1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="71dp"
+        android:ems="10"
+        android:hint="Enter number1"
+        android:inputType="none"
+        android:minHeight="48dp"
+        app:layout_constraintLeft_toLeftOf="@+id/TVnumber1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/ETnumber2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+
+        android:ems="10"
+        android:hint="Enter number2"
+        android:inputType="none"
+        android:minHeight="48dp"
+        app:layout_constraintLeft_toRightOf="@+id/TVnumber2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ETnumber1"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/TVnumber1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="81dp"
+        android:text="number 1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="27dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/TVnumber2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="number 2"
+        app:layout_constraintTop_toBottomOf="@+id/TVnumber1"
+        tools:layout_editor_absoluteX="31dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <LinearLayout
+        android:layout_width="417dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/ETnumber2"
+        tools:layout_editor_absoluteX="-3dp"
+        android:gravity="left"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="80dp">
+
+        <Button
+            android:id="@+id/addition_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD"
+            android:layout_gravity="left"
+            />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+
+        <Button
+            android:id="@+id/subtraction_btn"
+            android:layout_width="wrap_content"
+            android:text="SUBTRACT"
+            android:layout_gravity="right"
+            android:layout_height="wrap_content" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+
+        <Button
+            android:onClick="Mul"
+            android:id="@+id/multiply_btn"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:text="MULTIPLY"
+            android:layout_height="wrap_content" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+
+        <Button
+            android:onClick="Divide"
+            android:id="@+id/divide_btn"
+            android:text="DIVIDE"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/EtResult"
+        android:hint="RESULT"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:layout_width="126dp"
+        android:layout_height="63dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
